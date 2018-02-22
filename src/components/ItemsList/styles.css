@@ -1,0 +1,16 @@
+.itemsList-ul {
+  list-style-type: none;
+}
+
+.itemsList-ul li {
+  padding: 5px;
+}
+
+button {
+  border-radius: 4px;
+}
+.active {
+  background: blue;
+  color: #fff;
+  border-radius: 4px;
+}
