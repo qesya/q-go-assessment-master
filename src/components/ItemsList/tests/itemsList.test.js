@@ -28,6 +28,13 @@ describe('ItemsList', () => {
     expect(renderedItem.instance().filteredItems()).toHaveLength(2);
   });
 
+  it('should show `completed` items if Complete btn is clicked', () => {
+    const items = [{ id: 1, content: 'Test 1', completed: true, }, { id: 2, content: 'Test 2', completed: false, }];
+    const renderedItem = shallow(<ItemsList {...defaultProps} items={items} />);
+    renderedItem.find('.show-completed').simulate('click');
+    expect(renderedItem.instance().filteredItems()).toHaveLength(1);
+  });
+
   it('should add className `active` if Complete btn is clicked ', () => {
     const items = [{ id: 1, content: 'Test 1', completed: true }, { id: 2, content: 'Test 2', completed: false }];
     const renderedItem = shallow(<ItemsList {...defaultProps} items={items} />);

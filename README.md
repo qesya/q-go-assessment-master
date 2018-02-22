@@ -78,4 +78,3 @@ Ideally this should feel as much like normal development as possible.
 * You can add any libraries you need to get the job done.
 * Please contact us if you have any questions about the task, we're happy to
   give more details!
-# q-go-assessment-master

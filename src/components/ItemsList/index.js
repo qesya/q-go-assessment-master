@@ -6,7 +6,8 @@ import './styles.css';
 
 export class ItemsList extends React.Component {
   state = { filter: 'all' };
-  filteredItems(filter) {
+  filteredItems() {
+    const {filter} = this.state;
     let filteredItems = this.props.items.filter((item) => {
       if(filter === 'all') {
         return true;
@@ -24,7 +25,7 @@ export class ItemsList extends React.Component {
   }
   render() {
     const {filter} = this.state;
-    const filteredItems = this.filteredItems(this.state.filter);
+    const filteredItems = this.filteredItems();
     return (
     <div>
       <ul className="itemsList-ul">
